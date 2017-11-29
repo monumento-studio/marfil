@@ -1,0 +1,4611 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'History-Two';
+  src: url("../fonts/History-Two.eot?#iefix") format("../fonts/embedded-opentype"), url("../fonts/History-Two.otf") format("opentype"), url("../fonts/History-Two.woff") format("woff"), url("../fonts/History-Two.ttf") format("truetype"), url("../fonts/History-Two.svg#History-Two") format("svg");
+  font-weight: lighter;
+  font-style: normal;
+}
+
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+:focus {
+  outline: 0 !important;
+}
+
+span.box {
+  text-transform: uppercase !important;
+}
+
+body {
+  margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden],
+template {
+  display: none;
+}
+
+a {
+  background-color: transparent;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+pre {
+  overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+button {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+h1, h2, h3 {
+  font-weight: normal;
+  line-height: 1.25;
+}
+
+/*-----------------------------------*  $TOAST-GRID
+  An insane grid.
+  You'd be mad to use it.
+  Usage
+  =====
+  Assuming default values:
+  <div class="grid">
+    <div class="grid__col grid__col--1-of-2">
+      A half-width column.
+    </div>
+    <div class="grid__col grid__col--1-of-4 grid__col--pull-1-of-4">
+      A quarter, pulled left by its own width. You get this, right?
+    </div>
+  </div>
+  Customisation
+  =============
+  $toast-grid-namespace and $toast-grid-column-namespace
+  adjusts the class names for the grid. With
+  default values, grid wrappers have a class
+  of '.grid' and columns '.grid__col'.
+  $toast-col-groups(n) adjusts column divisions.
+  For example, $toast-col-groups(12) will produce
+  a 12-column grid. $col-groups(3,6,8)
+  will produce a 3-, 6-, and 8-column grid.
+  $toast-gutter-width is—you guessed it—the gutter
+  width. Accepts any unit.
+  That's it. Have fun.
+\*-----------------------------------*/
+.row {
+  list-style: none;
+  margin-left: -40px;
+}
+
+.col--15-of-15 {
+  width: 100%;
+}
+
+.col--5-of-15 {
+  width: 33.333%;
+}
+
+.col--10-of-15 {
+  width: 66.667%;
+}
+
+.col--push-15-of-15 {
+  margin-left: 100%;
+}
+
+.col--push-5-of-15 {
+  margin-left: 33.333%;
+}
+
+.col--push-10-of-15 {
+  margin-left: 66.667%;
+}
+
+.col--pull-15-of-15 {
+  margin-left: -100%;
+}
+
+.col--pull-5-of-15 {
+  margin-left: -33.333%;
+}
+
+.col--pull-10-of-15 {
+  margin-left: -66.667%;
+}
+
+.col--1-of-15 {
+  width: 6.667%;
+}
+
+.col--push-1-of-15 {
+  margin-left: 6.667%;
+}
+
+.col--pull-1-of-15 {
+  margin-left: -6.667%;
+}
+
+.col--2-of-15 {
+  width: 13.333%;
+}
+
+.col--push-2-of-15 {
+  margin-left: 13.333%;
+}
+
+.col--pull-2-of-15 {
+  margin-left: -13.333%;
+}
+
+.col--3-of-15 {
+  width: 20%;
+}
+
+.col--push-3-of-15 {
+  margin-left: 20%;
+}
+
+.col--pull-3-of-15 {
+  margin-left: -20%;
+}
+
+.col--4-of-15 {
+  width: 26.667%;
+}
+
+.col--push-4-of-15 {
+  margin-left: 26.667%;
+}
+
+.col--pull-4-of-15 {
+  margin-left: -26.667%;
+}
+
+.col--6-of-15 {
+  width: 40%;
+}
+
+.col--push-6-of-15 {
+  margin-left: 40%;
+}
+
+.col--pull-6-of-15 {
+  margin-left: -40%;
+}
+
+.col--7-of-15 {
+  width: 46.667%;
+}
+
+.col--push-7-of-15 {
+  margin-left: 46.667%;
+}
+
+.col--pull-7-of-15 {
+  margin-left: -46.667%;
+}
+
+.col--8-of-15 {
+  width: 53.333%;
+}
+
+.col--push-8-of-15 {
+  margin-left: 53.333%;
+}
+
+.col--pull-8-of-15 {
+  margin-left: -53.333%;
+}
+
+.col--9-of-15 {
+  width: 60%;
+}
+
+.col--push-9-of-15 {
+  margin-left: 60%;
+}
+
+.col--pull-9-of-15 {
+  margin-left: -60%;
+}
+
+.col--11-of-15 {
+  width: 73.333%;
+}
+
+.col--push-11-of-15 {
+  margin-left: 73.333%;
+}
+
+.col--pull-11-of-15 {
+  margin-left: -73.333%;
+}
+
+.col--12-of-15 {
+  width: 80%;
+}
+
+.col--push-12-of-15 {
+  margin-left: 80%;
+}
+
+.col--pull-12-of-15 {
+  margin-left: -80%;
+}
+
+.col--13-of-15 {
+  width: 86.667%;
+}
+
+.col--push-13-of-15 {
+  margin-left: 86.667%;
+}
+
+.col--pull-13-of-15 {
+  margin-left: -86.667%;
+}
+
+.col--14-of-15 {
+  width: 93.333%;
+}
+
+.col--push-14-of-15 {
+  margin-left: 93.333%;
+}
+
+.col--pull-14-of-15 {
+  margin-left: -93.333%;
+}
+
+.col {
+  box-sizing: border-box;
+  display: inline-block;
+  margin-right: -.25em;
+  min-height: 1px;
+  padding-left: 40px;
+  vertical-align: top;
+}
+
+.col--centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.col--d-first {
+  float: left;
+}
+
+.col--d-last {
+  float: right;
+}
+
+.row--no-gutter {
+  margin-left: 0;
+  width: 100%;
+}
+
+.row--no-gutter .col {
+  padding-left: 0;
+}
+
+.row--no-gutter .col--span-all {
+  margin-left: 0;
+  width: 100%;
+}
+
+.col--ab {
+  vertical-align: bottom;
+}
+
+.col--am {
+  vertical-align: middle;
+}
+
+body {
+  background-color: white;
+  font-size: 10px;
+  line-height: 1.6;
+  font-family: "History-Two";
+  color: #333333;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+body .page-home {
+  margin: 0;
+}
+
+::-moz-selection {
+  background: #FFF498;
+}
+
+::selection {
+  background: #FFF498;
+}
+
+::-moz-selection {
+  background: #FFF498;
+}
+
+img::-moz-selection {
+  background: transparent;
+}
+
+img::selection {
+  background: transparent;
+}
+
+img::-moz-selection {
+  background: transparent;
+}
+
+body {
+  -webkit-tap-highlight-color: #FFF498;
+}
+
+a {
+  color: #fafafa;
+  text-decoration: none;
+  outline: 0;
+}
+
+a:hover, a:focus {
+  color: #40a6ff;
+}
+
+.page-home {
+  background: #fafafa url("../img/bg-home.jpg") center fixed;
+  background-size: cover;
+}
+
+.page-home section {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.page-home section .logo {
+  position: absolute;
+  top: 60px;
+}
+
+.page-home section .logo img {
+  width: 150px;
+}
+
+.page-home section .menu .resp {
+  display: none;
+}
+
+.page-home section .menu ul {
+  margin: 0;
+  padding-top: 50px;
+  float: right;
+}
+
+.page-home section .menu ul li {
+  list-style: none;
+  display: inline;
+  font-family: "Courier New";
+  margin-left: 50px;
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+.page-home section .menu ul li a {
+  color: #333333;
+}
+
+.page-home section .menu ul li a:hover {
+  border-bottom: solid 1px #333333;
+}
+
+.page-home section .menu ul li a.tel {
+  color: #fafafa;
+  background: #333333;
+  padding: 10px;
+  transition: all 300ms;
+}
+
+.page-home section .menu ul li a.tel:hover {
+  transition: all 300ms;
+  border-bottom: none;
+  background: #000;
+}
+
+.page-home section .lead {
+  padding-top: 300px;
+}
+
+.page-home section .lead h1 {
+  font-family: "History-Two";
+  color: #333333;
+  margin: 0;
+  font-size: 64px;
+  font-size: 4rem;
+  font-weight: lighter;
+  margin-bottom: 200px;
+  line-height: 1.2;
+}
+
+.page-container {
+  position: relative;
+}
+
+.page-container section.cf {
+  width: 80%;
+  margin: 100px auto;
+}
+
+.page-container section.cf .containerr .content .lead {
+  color: #333333;
+  font-weight: lighter;
+  font-family: "History-Two";
+}
+
+.page-container section.cf .containerr .content .lead h2 {
+  font-size: 32px;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.page-container section.cf .containerr .content .text {
+  margin-top: 20px;
+}
+
+.page-container section.cf .containerr .content .text p {
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "Courier New";
+}
+
+.page-container section.cf .containerr .content .button {
+  margin-top: 50px;
+}
+
+.page-container section.cf .containerr .content .button a {
+  border: solid 1px #333333;
+  border-bottom: solid 1px #333333;
+  padding: 20px;
+  font-size: 16px;
+  font-size: 1rem;
+  color: #333333;
+  font-family: "Courier New";
+  transition: all .25s;
+}
+
+.page-container section.cf .containerr .content .button a:hover {
+  background: #333333;
+  color: #fafafa;
+  transition: all .25s;
+}
+
+.page-container section#contacto2 {
+  display: none;
+}
+
+.page-container section#contacto {
+  position: absolute;
+  right: 20%;
+  padding-top: 50px;
+  top: 0;
+  z-index: 1;
+}
+
+.page-container section#contacto .whats {
+  background: #333333;
+  width: 35px;
+  height: 35px;
+  padding: 10px;
+  position: relative;
+}
+
+.page-container section#contacto .whats img {
+  margin: 0;
+  width: 28px;
+  position: absolute;
+  padding: 0;
+  left: 50%;
+  top: 13px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.page-container section#contacto .whats .number {
+  position: absolute;
+  top: 0;
+  right: 55px;
+  width: 0px;
+  background: #333333;
+  height: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  transition: all 600ms;
+}
+
+.page-container section#contacto .whats .number span {
+  color: #fafafa;
+  text-align: center;
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "Courier New";
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.page-container section#contacto .whats:hover .number {
+  width: 220px !important;
+  transition: all 600ms;
+}
+
+.page-container section#contacto .mail {
+  background: #cfcfcf;
+  width: 35px;
+  height: 35px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.page-container section#contacto .mail img {
+  margin: 0;
+  width: 28px;
+  position: absolute;
+  padding: 0;
+  left: 50%;
+  bottom: 13px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.page-container section#contacto .mail .correo {
+  position: absolute;
+  bottom: 0;
+  right: 55px;
+  width: 0px;
+  background: #cfcfcf;
+  height: 55px;
+  overflow: hidden;
+  transition: all 600ms;
+}
+
+.page-container section#contacto .mail .correo span {
+  color: #333333;
+  text-align: center;
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "History-Two";
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  -webkit-transform: translatey(-50%);
+          transform: translatey(-50%);
+}
+
+.page-container section#contacto .mail .correo span a {
+  color: #fafafa !important;
+}
+
+.page-container section#contacto .mail:hover .correo {
+  width: 350px !important;
+  transition: all 600ms;
+}
+
+.page-container section.image {
+  background: #fafafa url("../img/image1.jpg") center fixed;
+  background-size: cover;
+  width: 100%;
+  height: 70vh;
+}
+
+.page-container section.compu {
+  background-color: #fafafa;
+}
+
+.page-container section.compu .compuu {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  padding: 100px 0;
+}
+
+.page-container section.compu .compuu img {
+  width: 100%;
+}
+
+.page-container section.compu .compuu .ri .lead h2 {
+  margin: 0;
+  font-size: 32px;
+  font-size: 2rem;
+  color: #333333;
+  line-height: 1.25;
+}
+
+.page-container section.compu .compuu .ri .text p {
+  margin-top: 50px;
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "Courier New";
+  color: #333333;
+}
+
+.page-container section.compu .compuu .ri .btn {
+  margin-top: 50px;
+}
+
+.page-container section.compu .compuu .ri .btn a {
+  color: #333333;
+  font-family: "Courier New";
+  font-size: 16px;
+  font-size: 1rem;
+  border-bottom: solid 1px #333333;
+  padding-bottom: 5px;
+}
+
+.page-container section.info {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  padding: 100px 0;
+}
+
+.page-container section.info .up {
+  margin-bottom: 100px;
+}
+
+.page-container section.info h2 {
+  font-size: 32px;
+  font-size: 2rem;
+}
+
+.page-container section.info h3 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  color: #cfcfcf;
+}
+
+.page-container section.info p {
+  font-family: "Courier New";
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+.page-container section.info .link {
+  margin-top: 50px;
+}
+
+.page-container section.info .link a {
+  color: #333333;
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "Courier New";
+  padding: 20px;
+  border: solid 1px #333333;
+  transition: all .25s;
+}
+
+.page-container section.info .link a:hover {
+  background: #333333;
+  color: #fafafa;
+  transition: all .25s;
+}
+
+.page-container section.imagee {
+  background: #fafafa url("../img/image2.jpg") center fixed;
+  background-size: cover;
+  width: 100%;
+  height: 70vh;
+}
+
+.page-container section.contact {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  padding: 100px 0;
+}
+
+.page-container section.contact .contacto {
+  position: relative;
+}
+
+.page-container section.contact .contacto .info {
+  font-family: "Courier New";
+  font-size: 16px;
+  font-size: 1rem;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.page-container section.contact .contacto .info span {
+  margin: 0;
+}
+
+.page-container section.contact .contacto .info p {
+  margin: 0;
+}
+
+.page-container section.contact .contacto .info a.mail {
+  display: none;
+}
+
+.page-container section.contact .contacto .map iframe {
+  width: 100%;
+}
+
+.page-nosotros {
+  background: #fafafa url("../img/bg-nosotros.jpg") center fixed;
+  background-size: cover;
+}
+
+.page-nosotros section {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.page-nosotros section .logo {
+  position: absolute;
+  top: 60px;
+}
+
+.page-nosotros section .logo img {
+  width: 150px;
+}
+
+.page-nosotros section .menu .resp {
+  display: none;
+}
+
+.page-nosotros section .menu ul {
+  margin: 0;
+  padding-top: 50px;
+  float: right;
+}
+
+.page-nosotros section .menu ul li {
+  list-style: none;
+  display: inline;
+  font-family: "Courier New";
+  margin-left: 50px;
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+.page-nosotros section .menu ul li a {
+  color: #333333;
+}
+
+.page-nosotros section .menu ul li a:hover {
+  border-bottom: solid 1px #333333;
+}
+
+.page-nosotros section .menu ul li a.tel {
+  color: #fafafa;
+  background: #333333;
+  padding: 10px;
+  transition: all 300ms;
+}
+
+.page-nosotros section .menu ul li a.tel:hover {
+  transition: all 300ms;
+  border-bottom: none;
+  background: #000;
+}
+
+.page-nosotros section .lead {
+  padding-top: 300px;
+}
+
+.page-nosotros section .lead h1 {
+  font-family: "History-Two";
+  color: #333333;
+  margin: 0;
+  font-size: 64px;
+  font-size: 4rem;
+  font-weight: lighter;
+  margin-bottom: 200px;
+  line-height: 1.2;
+}
+
+.page-container {
+  position: relative;
+}
+
+.page-container section.cf {
+  width: 80%;
+  margin: 100px auto;
+}
+
+.page-container section.cf .containerr .content .lead {
+  color: #333333;
+  font-weight: lighter;
+  font-family: "History-Two";
+}
+
+.page-container section.cf .containerr .content .lead h2 {
+  font-size: 32px;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.page-container section.cf .containerr .content .text {
+  margin-top: 20px;
+}
+
+.page-container section.cf .containerr .content .text p {
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "Courier New";
+}
+
+.page-container section.cf .containerr .content .down {
+  margin-top: 50px;
+}
+
+.page-container section.cf .containerr .content .down img {
+  width: 100%;
+}
+
+.page-container section.cf .containerr .content .down p {
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "Courier New";
+}
+
+.page-container section#contacto2 {
+  display: none;
+}
+
+.page-container section#contacto {
+  position: absolute;
+  right: 20%;
+  padding-top: 50px;
+  top: 0;
+  z-index: 1;
+}
+
+.page-container section#contacto .whats {
+  background: #333333;
+  width: 35px;
+  height: 35px;
+  padding: 10px;
+  position: relative;
+}
+
+.page-container section#contacto .whats img {
+  margin: 0;
+  width: 28px;
+  position: absolute;
+  padding: 0;
+  left: 50%;
+  top: 13px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.page-container section#contacto .whats .number {
+  position: absolute;
+  top: 0;
+  right: 55px;
+  width: 0px;
+  background: #333333;
+  height: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  transition: all 600ms;
+}
+
+.page-container section#contacto .whats .number span {
+  color: #fafafa;
+  text-align: center;
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "Courier New";
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.page-container section#contacto .whats:hover .number {
+  width: 220px !important;
+  transition: all 600ms;
+}
+
+.page-container section#contacto .mail {
+  background: #cfcfcf;
+  width: 35px;
+  height: 35px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.page-container section#contacto .mail img {
+  margin: 0;
+  width: 28px;
+  position: absolute;
+  padding: 0;
+  left: 50%;
+  bottom: 13px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.page-container section#contacto .mail .correo {
+  position: absolute;
+  bottom: 0;
+  right: 55px;
+  width: 0px;
+  background: #cfcfcf;
+  height: 55px;
+  overflow: hidden;
+  transition: all 600ms;
+}
+
+.page-container section#contacto .mail .correo span {
+  color: #333333;
+  text-align: center;
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "History-Two";
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  -webkit-transform: translatey(-50%);
+          transform: translatey(-50%);
+}
+
+.page-container section#contacto .mail:hover .correo {
+  width: 350px !important;
+  transition: all 600ms;
+}
+
+.page-container section.imageee {
+  background: #fafafa url("../img/nosotros3.jpg") center fixed;
+  background-size: cover;
+  width: 100%;
+  height: 70vh;
+}
+
+.page-container section.imageee .lead {
+  margin-top: 200px;
+}
+
+.page-container section.imageee .lead h1 {
+  font-size: 64px;
+  font-size: 4rem;
+  color: #fafafa;
+}
+
+.page-container section.imageee .ver {
+  margin-top: 50px;
+}
+
+.page-container section.imageee .ver a {
+  color: #fafafa;
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "Courier New";
+  padding: 20px;
+  border: solid 1px #fafafa;
+  transition: all 300ms;
+}
+
+.page-container section.imageee .ver a:hover {
+  background: #fafafa;
+  color: #333333;
+  transition: all 300ms;
+}
+
+.page-container section.imagenes {
+  width: 80%;
+  margin: 100px auto;
+}
+
+.page-container section.imagenes img {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.page-container section.imagenes span {
+  font-family: "Courier New";
+  color: #333333;
+  font-size: 16px !important;
+  font-size: 1rem !important;
+  border-bottom: solid 1px #333333;
+  opacity: 1 !important;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+.page-container section.imagenes .col {
+  margin-bottom: 50px;
+}
+
+.page-tratamientos {
+  background: white;
+  width: 100vw !important;
+  overflow: hidden !important;
+}
+
+.page-tratamientos section.home {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.page-tratamientos section.home .logo {
+  position: absolute;
+  top: 60px;
+}
+
+.page-tratamientos section.home .logo img {
+  width: 150px;
+}
+
+.page-tratamientos section.home .menu .resp {
+  display: none;
+}
+
+.page-tratamientos section.home .menu ul {
+  margin: 0;
+  padding-top: 50px;
+  float: right;
+}
+
+.page-tratamientos section.home .menu ul li {
+  list-style: none;
+  display: inline;
+  font-family: "Courier New";
+  margin-left: 50px;
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+.page-tratamientos section.home .menu ul li a {
+  color: #333333;
+}
+
+.page-tratamientos section.home .menu ul li a:hover {
+  border-bottom: solid 1px #333333;
+}
+
+.page-tratamientos section.home .menu ul li a.tel {
+  color: #fafafa;
+  background: #333333;
+  padding: 10px;
+  transition: all 300ms;
+}
+
+.page-tratamientos section.home .menu ul li a.tel:hover {
+  transition: all 300ms;
+  border-bottom: none;
+  background: #000;
+}
+
+.page-tratamientos section.home .lead {
+  padding-top: 300px;
+}
+
+.page-tratamientos section.home .lead h1 {
+  font-family: "History-Two";
+  color: #333333;
+  margin: 0;
+  font-size: 64px;
+  font-size: 4rem;
+  font-weight: lighter;
+  margin-bottom: 200px;
+  line-height: 1.2;
+}
+
+.page-tratamientos section.compu {
+  background-color: #fafafa;
+  width: 100%;
+}
+
+.page-tratamientos section.compu .compuu {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  padding: 100px 0;
+}
+
+.page-tratamientos section.compu .compuu img {
+  width: 100%;
+  margin-left: -40px;
+}
+
+.page-tratamientos section.compu .compuu .ri .lead h2 {
+  margin: 0;
+  font-size: 32px;
+  font-size: 2rem;
+  color: #333333;
+  line-height: 1.25;
+}
+
+.page-tratamientos section.compu .compuu .ri .text p {
+  margin-top: 50px;
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "Courier New";
+  color: #333333;
+}
+
+.page-tratamientos section.compu .compuu .ri .btn {
+  margin-top: 50px;
+}
+
+.page-tratamientos section.compu .compuu .ri .btn a {
+  color: #333333;
+  font-family: "Courier New";
+  font-size: 16px;
+  font-size: 1rem;
+  border-bottom: solid 1px #333333;
+  padding-bottom: 5px;
+}
+
+.page-container {
+  position: relative;
+}
+
+.page-container section.info {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.page-container section.info .up span.box {
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "Courier New";
+  border-bottom: solid 1px #333333;
+  cursor: pointer;
+  position: static;
+  display: block;
+  width: 200px;
+  margin-top: 25px;
+  margin-bottom: 100px;
+  opacity: .5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
+
+.page-container section.info .up span.box:hover {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+.page-container section#contacto2 {
+  display: none;
+}
+
+.page-container section#contacto {
+  position: absolute;
+  right: 10%;
+  padding-top: 50px;
+  top: 0;
+  z-index: 1;
+}
+
+.page-container section#contacto .whats {
+  background: #333333;
+  width: 35px;
+  height: 35px;
+  padding: 10px;
+  position: relative;
+}
+
+.page-container section#contacto .whats img {
+  margin: 0;
+  width: 28px;
+  position: absolute;
+  padding: 0;
+  left: 50%;
+  top: 13px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.page-container section#contacto .whats .number {
+  position: absolute;
+  top: 0;
+  right: 55px;
+  width: 0px;
+  background: #333333;
+  height: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  transition: all 600ms;
+}
+
+.page-container section#contacto .whats .number span {
+  color: #fafafa;
+  text-align: center;
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "Courier New";
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.page-container section#contacto .whats:hover .number {
+  width: 220px !important;
+  transition: all 600ms;
+}
+
+.page-container section#contacto .mail {
+  background: #cfcfcf;
+  width: 35px;
+  height: 35px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.page-container section#contacto .mail img {
+  margin: 0;
+  width: 28px;
+  position: absolute;
+  padding: 0;
+  left: 50%;
+  bottom: 13px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.page-container section#contacto .mail .correo {
+  position: absolute;
+  bottom: 0;
+  right: 55px;
+  width: 0px;
+  background: #cfcfcf;
+  height: 55px;
+  overflow: hidden;
+  transition: all 600ms;
+}
+
+.page-container section#contacto .mail .correo span {
+  color: #333333;
+  text-align: center;
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "History-Two";
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  -webkit-transform: translatey(-50%);
+          transform: translatey(-50%);
+}
+
+.page-container section#contacto .mail:hover .correo {
+  width: 350px !important;
+  transition: all 600ms;
+}
+
+.page-container section.cf.nosotros {
+  margin-top: -150px;
+  padding-top: 50px !important;
+  padding-bottom: 50px;
+  margin-bottom: 0 !important;
+  background: #fafafa;
+  width: 100% !important;
+}
+
+.page-container section.cf.nosotros .containerr {
+  width: 90% !important;
+  margin: 0 auto;
+}
+
+.page-container section.cf.nosotros .containerr .content p {
+  margin-bottom: 25px;
+}
+
+.page-container section.cf.nosotros .containerr .content span.box {
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "Courier New";
+  border-bottom: solid 1px #333333;
+  cursor: pointer;
+  opacity: .5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
+
+.page-container section.cf.nosotros .containerr .content span.box:hover {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+.page-container section.imageeee {
+  background: #fafafa url("../img/nosotros8.jpg") center fixed;
+  background-size: cover;
+  width: 100%;
+  height: 70vh;
+  position: relative;
+}
+
+.page-container section.imageeee .btn {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  max-width: 250px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.page-container section.imageeee .btn span {
+  color: #333333;
+  background: white;
+  padding: 20px 20px;
+  font-family: "Courier New";
+  font-size: 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.page-container section.imageeee.last {
+  background: #fafafa url("../img/nosotros9.jpg") center fixed;
+  background-size: cover;
+  width: 100%;
+  height: 70vh;
+  position: relative;
+}
+
+.page-container section.imageeee.last .btn {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.page-container section.imageeee.last .btn span {
+  color: #333333;
+  background: white;
+  padding: 20px 20px;
+  font-family: "Courier New";
+  font-size: 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  opacity: .5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
+
+.page-container section.imageeee.last .btn span:hover {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+.page-container section.imagenes {
+  width: 80%;
+  margin: 100px auto;
+}
+
+.page-container section.imagenes img {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.page-container section.imagenes span {
+  font-family: "Courier New";
+  color: #333333;
+  font-size: 32px;
+  font-size: 2rem;
+  border-bottom: solid 1px #333333;
+  opacity: .5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
+
+.page-container section.imagenes span:hover {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+.page-container section.imagenes .col {
+  margin-bottom: 50px;
+}
+
+.page-container section.slide {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.page-container section.slide h2 {
+  font-size: 32px;
+  font-size: 2rem;
+  margin-bottom: 100px;
+}
+
+.page-container section.slide #carousel {
+  height: 100%;
+  margin-bottom: 250px;
+}
+
+.page-container section.slide #carousel img {
+  margin: 0 auto;
+  height: 100%;
+}
+
+.page-container section.slide .nav-sld .prev {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.page-container section.slide .nav-sld .prev img {
+  width: 30px;
+}
+
+.page-container section.slide .nav-sld .next {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0;
+}
+
+.page-container section.slide .nav-sld .next img {
+  width: 30px;
+}
+
+.page-container section.garantia {
+  background: #333333;
+}
+
+.page-container section.garantia .wrap {
+  padding-top: 50px;
+  padding-bottom: 100px;
+  width: 80%;
+  margin: 0 auto;
+  color: #fafafa;
+}
+
+.page-container section.garantia .wrap h2 {
+  font-size: 32px;
+  font-size: 2rem;
+}
+
+.page-container section.garantia .wrap p {
+  font-family: "Courier New";
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+.page-container .overlay {
+  background: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 11;
+}
+
+.page-container .overlay .li-blanqueamiento {
+  display: none;
+}
+
+.page-container .overlay .car {
+  display: none;
+}
+
+.page-container .overlay .por {
+  display: none;
+}
+
+.page-container .overlay .cor {
+  display: none;
+}
+
+.page-container .overlay .imp {
+  display: none;
+}
+
+.page-container .overlay .res {
+  display: none;
+}
+
+.page-container .overlay .per {
+  display: none;
+}
+
+.page-container .overlay .end {
+  display: none;
+}
+
+.page-container .overlay .ort {
+  display: none;
+}
+
+.page-container .overlay .gua {
+  display: none;
+}
+
+.page-container .overlay .cir {
+  display: none;
+}
+
+.page-container .overlay .impl {
+  display: none;
+}
+
+.page-container .overlay .odo {
+  display: none;
+}
+
+.page-container .overlay .wrap {
+  background: #fafafa;
+  width: 80%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 60px;
+  position: relative;
+}
+
+.page-container .overlay .wrap span {
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "Courier New";
+  text-transform: uppercase;
+  border-bottom: solid 1px #333333;
+}
+
+.page-container .overlay .wrap h2 {
+  font-size: 32px;
+  font-size: 2rem;
+  margin-top: 50px;
+}
+
+.page-container .overlay .wrap .text {
+  height: 50vh;
+  overflow-y: scroll;
+  margin-top: 50px;
+}
+
+.page-container .overlay .wrap .text p {
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "Courier New";
+}
+
+.page-container .overlay .wrap .text:last-child {
+  margin-bottom: 100px !important;
+}
+
+.page-container .overlay .wrap .text span.q {
+  border-bottom: solid 1px #333333;
+  margin-top: 50px !important;
+  display: inline-block;
+}
+
+.page-container .overlay .wrap .x {
+  cursor: pointer;
+  position: absolute;
+  top: 60px;
+  right: 60px;
+}
+
+.page-container .overlay .wrap .x img {
+  width: 20px;
+}
+
+.page-contacto {
+  background: white;
+}
+
+.page-contacto section {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.page-contacto section .logo {
+  position: absolute;
+  top: 60px;
+}
+
+.page-contacto section .logo img {
+  width: 150px;
+}
+
+.page-contacto section .menu .resp {
+  display: none;
+}
+
+.page-contacto section .menu ul {
+  margin: 0;
+  padding-top: 50px;
+  float: right;
+}
+
+.page-contacto section .menu ul li {
+  list-style: none;
+  display: inline;
+  font-family: "Courier New";
+  margin-left: 50px;
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+.page-contacto section .menu ul li a {
+  color: #333333;
+}
+
+.page-contacto section .menu ul li a:hover {
+  border-bottom: solid 1px #333333;
+}
+
+.page-contacto section .menu ul li a.tel {
+  color: #fafafa;
+  background: #333333;
+  padding: 10px;
+  transition: all 300ms;
+}
+
+.page-contacto section .menu ul li a.tel:hover {
+  transition: all 300ms;
+  border-bottom: none;
+  background: #000;
+}
+
+.page-contacto section .lead {
+  padding-top: 300px;
+}
+
+.page-contacto section .lead h1 {
+  font-family: "History-Two";
+  color: #333333;
+  margin: 0;
+  font-size: 64px;
+  font-size: 4rem;
+  font-weight: lighter;
+  margin-bottom: 200px;
+  line-height: 1.2;
+}
+
+.page-container {
+  position: relative;
+}
+
+.page-container section.map {
+  width: 80%;
+  margin: 100px auto;
+}
+
+.page-container section.map iframe {
+  padding-top: 50px;
+  width: 100%;
+  height: 70vh;
+}
+
+.page-container section.map .info {
+  margin-top: 100px;
+}
+
+.page-container section.map .info h2 {
+  margin-top: 0;
+  font-size: 32px;
+  font-size: 2rem;
+}
+
+.page-container section.map .info .btn {
+  margin-top: 50px;
+  width: 290px;
+}
+
+.page-container section.map .info .btn a {
+  color: #333333 !important;
+  font-family: "Courier New" !important;
+  font-size: 16px;
+  font-size: 1rem;
+  padding: 20px;
+  border: solid 1px #333333;
+  transition: all 300ms;
+}
+
+.page-container section.map .info .btn a:hover {
+  background: #333333;
+  color: #fafafa !important;
+  transition: all 300ms;
+}
+
+.page-container section.map .info .ri {
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "Courier New";
+}
+
+.page-container section.map .info .ri span {
+  border-bottom: solid 1px #333333;
+}
+
+.page-container section.map .info .ri a {
+  color: #cfcfcf;
+}
+
+.page-container section.map .info .ri a:hover {
+  color: #333333;
+}
+
+.page-container section#contacto2 {
+  display: none;
+}
+
+.page-container section#contacto {
+  position: absolute;
+  right: 10%;
+  padding-top: 50px;
+  top: 0;
+  z-index: 1;
+}
+
+.page-container section#contacto .whats {
+  background: #333333;
+  width: 35px;
+  height: 35px;
+  padding: 10px;
+  position: relative;
+}
+
+.page-container section#contacto .whats img {
+  margin: 0;
+  width: 28px;
+  position: absolute;
+  padding: 0;
+  left: 50%;
+  top: 13px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.page-container section#contacto .whats .number {
+  position: absolute;
+  top: 0;
+  right: 55px;
+  width: 0px;
+  background: #333333;
+  height: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  transition: all 600ms;
+}
+
+.page-container section#contacto .whats .number span {
+  color: #fafafa;
+  text-align: center;
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "Courier New";
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.page-container section#contacto .whats:hover .number {
+  width: 220px !important;
+  transition: all 600ms;
+}
+
+.page-container section#contacto .mail {
+  background: #cfcfcf;
+  width: 35px;
+  height: 35px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.page-container section#contacto .mail img {
+  margin: 0;
+  width: 28px;
+  position: absolute;
+  padding: 0;
+  left: 50%;
+  bottom: 13px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.page-container section#contacto .mail .correo {
+  position: absolute;
+  bottom: 0;
+  right: 55px;
+  width: 0px;
+  background: #cfcfcf;
+  height: 55px;
+  overflow: hidden;
+  transition: all 600ms;
+}
+
+.page-container section#contacto .mail .correo span {
+  color: #333333;
+  text-align: center;
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "History-Two";
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  -webkit-transform: translatey(-50%);
+          transform: translatey(-50%);
+}
+
+.page-container section#contacto .mail:hover .correo {
+  width: 350px !important;
+  transition: all 600ms;
+}
+
+.page-container section.footer {
+  padding: 100px 0;
+  background: #333333;
+}
+
+.page-container section.footer .foo {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  font-size: 16px;
+  font-size: 1rem;
+  color: #fafafa;
+  font-family: "Courier New";
+}
+
+.page-container section.footer .foo .logo img {
+  width: 40px;
+  margin: 0;
+}
+
+.page-container section.footer .foo .text {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+.page-container section.footer .foo .text p {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  text-transform: uppercase;
+}
+
+.page-container section.footer .foo .dir {
+  margin-top: 30px;
+}
+
+.page-container section.footer .foo .dir span {
+  border-bottom: solid 1px #fafafa;
+}
+
+.page-container section.footer .foo .list {
+  margin-top: 45px;
+}
+
+.page-container section.footer .foo .list ul li {
+  list-style: none;
+}
+
+.page-container section.footer .foo .list ul li a {
+  color: #fafafa;
+}
+
+.page-container section.footer .foo .list ul li a:hover {
+  border-bottom: solid 1px #fafafa;
+}
+
+.page-container section.footer .foo .redes {
+  margin-top: 45px;
+}
+
+.page-container section.footer .foo .redes ul li {
+  list-style: none;
+}
+
+.page-container section.footer .foo .redes ul li a {
+  color: #fafafa;
+}
+
+.page-container section.footer .foo .redes ul li a:hover {
+  border-bottom: solid 1px #fafafa;
+}
+
+@media (max-width: 350px){
+  h1{
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (max-width: 768px){
+  .col{
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    width: auto;
+  }
+  .col[class*="col--s-"]{
+    display: inline-block;
+    margin-right: -.24em;
+  }
+  .col.col--s-1-of-2, .col.col--s-2-of-4{
+    width: 50%;
+  }
+  .col.col--s-1-of-3{
+    width: 33.333%;
+  }
+  .col.col--s-2-of-3{
+    width: 66.667%;
+  }
+  .col.col--s-1-of-4{
+    width: 25%;
+  }
+  .col.col--s-3-of-4{
+    width: 75%;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 768px){
+  .col[class*="col--m-"]{
+    display: inline-block;
+    margin-right: -.24em;
+  }
+  .col.col--m-1-of-2, .col.col--m-2-of-4{
+    width: 50%;
+  }
+  .col.col--m-1-of-3{
+    width: 33.333%;
+  }
+  .col.col--m-2-of-3{
+    width: 66.667%;
+  }
+  .col.col--m-1-of-4{
+    width: 25%;
+  }
+  .col.col--m-3-of-4{
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 1600px){
+  .page-home section{
+    width: 90%;
+  }
+  .page-home section .menu ul li{
+    font-size: 0.9rem;
+  }
+  .page-home section .lead h1{
+    font-size: 3.5rem;
+  }
+  .page-container{
+    position: relative;
+  }
+  .page-container section.cf{
+    width: 90%;
+  }
+  .page-container section.cf .containerr .content .lead h2{
+    font-size: 1.8rem;
+  }
+  .page-container section.cf .containerr .content .text p{
+    font-size: 0.9rem;
+  }
+  .page-container section.cf .containerr .content .button a{
+    font-size: 0.9rem;
+  }
+  .page-container section#contacto .whats .number span{
+    font-size: 0.9rem;
+  }
+  .page-container section#contacto .mail .correo span{
+    font-size: 0.9rem;
+  }
+  .page-container section.compu{
+    background-color: #fafafa;
+  }
+  .page-container section.compu .compuu{
+    width: 90%;
+  }
+  .page-container section.compu .compuu .ri .lead h2{
+    font-size: 1.8rem;
+  }
+  .page-container section.compu .compuu .ri .text p{
+    margin-top: 50px;
+    font-size: 0.9rem;
+  }
+  .page-container section.compu .compuu .ri .btn a{
+    font-size: 0.9rem;
+  }
+  .page-container section.info{
+    width: 90%;
+  }
+  .page-container section.info h2{
+    font-size: 1.8rem;
+  }
+  .page-container section.info p{
+    font-size: 0.9rem;
+  }
+  .page-container section.contact{
+    width: 90%;
+  }
+  .page-container section.contact .contacto .info{
+    font-size: 0.9rem;
+  }
+  .page-container section.footer .foo{
+    width: 90%;
+    font-size: 0.9rem;
+  }
+  .page-nosotros section{
+    width: 90%;
+  }
+  .page-nosotros section .menu ul li{
+    font-size: 0.9rem;
+  }
+  .page-nosotros section .lead h1{
+    font-size: 3.5rem;
+  }
+  .page-container{
+    position: relative;
+  }
+  .page-container section.cf{
+    width: 90%;
+  }
+  .page-container section.cf .containerr .content .lead h2{
+    font-size: 1.8rem;
+  }
+  .page-container section.cf .containerr .content .text p{
+    font-size: 0.9rem;
+  }
+  .page-container section.cf .containerr .content .button a{
+    font-size: 0.9rem;
+  }
+  .page-container section#contacto .whats .number span{
+    font-size: 0.9rem;
+  }
+  .page-container section#contacto .mail .correo span{
+    font-size: 0.9rem;
+  }
+  .page-container section.footer .foo{
+    width: 90%;
+    font-size: 0.9rem;
+  }
+  .page-tratamientos section .menu ul li{
+    font-size: 0.9rem;
+  }
+  .page-tratamientos section .lead h1{
+    font-size: 3.5rem;
+  }
+  .page-container{
+    position: relative;
+  }
+  .page-container section.cf{
+    width: 100%;
+  }
+  .page-container section.cf .containerr .content .lead h2{
+    font-size: 1.8rem;
+  }
+  .page-container section.cf .containerr .content .text p{
+    font-size: 0.9rem;
+  }
+  .page-container section.cf .containerr .content .button a{
+    font-size: 0.9rem;
+  }
+  .page-container section#contacto .whats .number span{
+    font-size: 0.9rem;
+  }
+  .page-container section#contacto .mail .correo span{
+    font-size: 0.9rem;
+  }
+  .page-container section.footer .foo{
+    width: 90%;
+    font-size: 0.9rem;
+  }
+  .page-contacto section{
+    width: 90%;
+  }
+  .page-contacto section .menu ul li{
+    font-size: 0.9rem;
+  }
+  .page-contacto section .lead h1{
+    font-size: 3.5rem;
+  }
+  .page-container{
+    position: relative;
+  }
+  .page-container section.map{
+    width: 90%;
+  }
+  .page-container section#contacto .whats .number span{
+    font-size: 0.9rem;
+  }
+  .page-container section#contacto .mail .correo span{
+    font-size: 0.9rem;
+  }
+  .page-container section.compu{
+    background-color: #fafafa;
+  }
+  .page-container section.compu .compuu{
+    width: 90%;
+  }
+  .page-container section.compu .compuu .ri .lead h2{
+    font-size: 1.8rem;
+  }
+  .page-container section.compu .compuu .ri .text p{
+    margin-top: 50px;
+    font-size: 0.9rem;
+  }
+  .page-container section.compu .compuu .ri .btn a{
+    font-size: 0.9rem;
+  }
+  .page-container section.footer .foo{
+    width: 90%;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .page-home{
+    background: #fafafa url("../img/bg-home.jpg") center fixed;
+    background-size: cover;
+  }
+  .page-home:before{
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #fafafa url("../img/bg-home.jpg") no-repeat center center;
+    background-size: cover;
+  }
+  .page-home section{
+    width: 100%;
+  }
+  .page-home section .logo{
+    display: none;
+  }
+  .page-home section .logo img{
+    width: 100px;
+  }
+  .page-home section .menu{
+    position: relative;
+  }
+  .page-home section .menu .resp{
+    background: white;
+    width: 100%;
+    height: 90px;
+    display: block;
+    position: fixed;
+    left: 0;
+    z-index: 10;
+  }
+  .page-home section .menu .resp .logo-resp h2{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+    left: 90px;
+    font-size: 2rem;
+  }
+  .page-home section .menu .resp .logo-resp img{
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    margin: 0;
+    padding: 0;
+    width: 40px;
+  }
+  .page-home section .menu .resp .ham{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    right: 30px;
+    width: 35px;
+  }
+  .page-home section .menu .resp .ham .line{
+    margin-bottom: 10px !important;
+    width: 100%;
+    height: 1px;
+    background: #333333;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+  }
+  .page-home section .menu .resp .ham .line:last-child{
+    margin-bottom: 0;
+  }
+  .page-home section .menu .resp .clicked .line{
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+  }
+  .page-home section .menu .resp .clicked .line:first-child{
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    position: relative;
+    top: 5px;
+  }
+  .page-home section .menu .resp .clicked .line:nth-child(2){
+    display: none;
+  }
+  .page-home section .menu .resp .clicked .line:last-child{
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+    position: relative;
+    bottom: 6px;
+  }
+  .page-home section .menu ul{
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    margin-top: 30px;
+    top: 0px;
+    float: none;
+    width: 100%;
+    background: #fafafa;
+    transition: all 1s;
+    height: 0;
+    overflow: hidden;
+  }
+  .page-home section .menu ul li{
+    display: block;
+    margin-bottom: 25px;
+  }
+  .page-home section .menu ul li:last-child{
+    display: none;
+  }
+  .page-home section .menu ul li a{
+    color: #333333;
+  }
+  .page-home section .menu ul li a:hover{
+    border-bottom: solid 1px #333333;
+  }
+  .page-home section .menu ul li .tel{
+    color: #fafafa;
+    background: #333333;
+    padding: 10px;
+  }
+  .page-home section .menu .grow{
+    height: 150px;
+    padding-top: 90px;
+    transition: all 1s;
+  }
+  .page-home section .lead{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 150px;
+    background: none;
+  }
+  .page-home section .lead h1{
+    padding-bottom: 0px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 100px !important;
+  }
+  .page-container{
+    position: relative;
+    background: white;
+  }
+  .page-container section.cf{
+    width: 80%;
+    margin: 50px auto 100px !important;
+    padding-top: 200px;
+  }
+  .page-container section.cf .containerr .content .lead{
+    color: #333333;
+    font-weight: lighter;
+    font-family: "History-Two";
+  }
+  .page-container section.cf .containerr .content .lead h2{
+    font-size: 2rem;
+    margin: 0;
+  }
+  .page-container section.cf .containerr .content .text{
+    margin-top: 20px;
+  }
+  .page-container section.cf .containerr .content .text p{
+    font-size: 1rem;
+    font-family: "Courier New";
+  }
+  .page-container section.cf .containerr .content .button{
+    margin-top: 50px;
+  }
+  .page-container section.cf .containerr .content .button a{
+    border: solid 1px #333333;
+    border-bottom: solid 1px #333333;
+    padding: 20px;
+    font-size: 1rem;
+    color: #333333;
+    font-family: "Courier New";
+    transition: all .25s;
+  }
+  .page-container section.cf .containerr .content .button a:hover{
+    background: #333333;
+    color: #fafafa;
+    transition: all .25s;
+  }
+  .page-container section#contacto{
+    display: none;
+  }
+  .page-container section#contacto2{
+    margin-top: 90px;
+    position: absolute;
+    top: -90px;
+    z-index: 5;
+    display: block;
+    background: #333333;
+    width: 100%;
+  }
+  .page-container section#contacto2 .logo{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: 50px;
+  }
+  .page-container section#contacto2 .logo img{
+    width: 35px;
+  }
+  .page-container section#contacto2 h2{
+    font-family: "Courier New";
+    color: #fafafa !important;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 10px;
+  }
+  .page-container section.image{
+    background: #fafafa url("../img/image1.jpg") center center;
+    background-size: cover;
+    width: 100%;
+    height: 70vh;
+  }
+  .page-container section.compu{
+    background-color: #fafafa;
+  }
+  .page-container section.compu .compuu{
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    padding: 100px 0;
+  }
+  .page-container section.compu .compuu img{
+    width: 100%;
+  }
+  .page-container section.compu .compuu .ri .lead h2{
+    margin: 0;
+    font-size: 2rem;
+    color: #333333;
+    line-height: 1.25;
+  }
+  .page-container section.compu .compuu .ri .text p{
+    margin-top: 50px;
+    font-size: 1rem;
+    font-family: "Courier New";
+    color: #333333;
+  }
+  .page-container section.compu .compuu .ri .btn{
+    margin-top: 50px;
+  }
+  .page-container section.compu .compuu .ri .btn a{
+    color: #333333;
+    font-family: "Courier New";
+    font-size: 1rem;
+    border-bottom: solid 1px #333333;
+    padding-bottom: 5px;
+  }
+  .page-container section.info{
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    padding: 100px 0;
+  }
+  .page-container section.info .up{
+    margin-bottom: 100px;
+  }
+  .page-container section.info h2{
+    font-size: 2rem;
+  }
+  .page-container section.info h3{
+    font-size: 1.5rem;
+    color: #cfcfcf;
+  }
+  .page-container section.info p{
+    font-family: "Courier New";
+    font-size: 1rem;
+  }
+  .page-container section.imagee{
+    background: #fafafa url("../img/image2.jpg") center center;
+    background-size: cover;
+    width: 100%;
+    height: 70vh;
+  }
+  .page-container section.contact{
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    padding: 100px 0;
+  }
+  .page-container section.contact .contacto{
+    position: relative;
+  }
+  .page-container section.contact .contacto .info{
+    font-family: "Courier New";
+    font-size: 1rem;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .page-container section.contact .contacto .info span{
+    margin: 0;
+  }
+  .page-container section.contact .contacto .info p{
+    margin: 0;
+  }
+  .page-container section.contact .contacto .map iframe{
+    width: 100%;
+  }
+  .page-container section.footer{
+    padding: 100px 0;
+    background: #333333;
+  }
+  .page-container section.footer .foo{
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    font-size: 1rem;
+    color: #fafafa;
+    font-family: "Courier New";
+  }
+  .page-container section.footer .foo .logo img{
+    width: 100px;
+    margin: 0;
+  }
+  .page-container section.footer .foo .text p{
+    text-transform: uppercase;
+  }
+  .page-container section.footer .foo .dir{
+    margin-top: 30px;
+  }
+  .page-container section.footer .foo .dir span{
+    border-bottom: solid 1px #fafafa;
+  }
+  .page-container section.footer .foo .list{
+    margin-top: 65px;
+  }
+  .page-container section.footer .foo .list ul li{
+    list-style: none;
+  }
+  .page-container section.footer .foo .list ul li a{
+    color: #fafafa;
+  }
+  .page-container section.footer .foo .redes{
+    margin-top: 65px;
+  }
+  .page-container section.footer .foo .redes ul li{
+    list-style: none;
+  }
+  .page-container section.footer .foo .redes ul li a{
+    color: #fafafa;
+  }
+  .page-nosotros{
+    background: #fafafa url("../img/bg-nosotros.jpg") center fixed;
+    background-size: cover;
+  }
+  .page-nosotros:before{
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #fafafa url("../img/bg-nosotros.jpg") no-repeat center center;
+    background-size: cover;
+  }
+  .page-nosotros section{
+    width: 100%;
+  }
+  .page-nosotros section .logo{
+    display: none;
+  }
+  .page-nosotros section .logo img{
+    width: 100px;
+  }
+  .page-nosotros section .menu{
+    position: relative;
+  }
+  .page-nosotros section .menu .resp{
+    background: white;
+    width: 100%;
+    height: 90px;
+    display: block;
+    position: fixed;
+    left: 0;
+    z-index: 10;
+  }
+  .page-nosotros section .menu .resp .logo-resp h2{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+    left: 90px;
+    font-size: 2rem;
+  }
+  .page-nosotros section .menu .resp .logo-resp img{
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    margin: 0;
+    padding: 0;
+    width: 40px;
+  }
+  .page-nosotros section .menu .resp .ham{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    right: 30px;
+    width: 35px;
+  }
+  .page-nosotros section .menu .resp .ham .line{
+    margin-bottom: 10px !important;
+    width: 100%;
+    height: 1px;
+    background: #333333;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+  }
+  .page-nosotros section .menu .resp .ham .line:last-child{
+    margin-bottom: 0;
+  }
+  .page-nosotros section .menu .resp .clicked .line{
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+  }
+  .page-nosotros section .menu .resp .clicked .line:first-child{
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    position: relative;
+    top: 5px;
+  }
+  .page-nosotros section .menu .resp .clicked .line:nth-child(2){
+    display: none;
+  }
+  .page-nosotros section .menu .resp .clicked .line:last-child{
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+    position: relative;
+    bottom: 6px;
+  }
+  .page-nosotros section .menu ul{
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    margin-top: 30px;
+    top: 0px;
+    float: none;
+    width: 100%;
+    background: #fafafa;
+    transition: all 1s;
+    height: 0;
+    overflow: hidden;
+  }
+  .page-nosotros section .menu ul li{
+    display: block;
+    margin-bottom: 25px;
+  }
+  .page-nosotros section .menu ul li:last-child{
+    display: none;
+  }
+  .page-nosotros section .menu ul li a{
+    color: #333333;
+  }
+  .page-nosotros section .menu ul li a:hover{
+    border-bottom: solid 1px #333333;
+  }
+  .page-nosotros section .menu ul li .tel{
+    color: #fafafa;
+    background: #333333;
+    padding: 10px;
+  }
+  .page-nosotros section .menu .grow{
+    height: 150px;
+    padding-top: 90px;
+    transition: all 1s;
+  }
+  .page-nosotros section .lead{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 150px;
+    background: none;
+  }
+  .page-nosotros section .lead h1{
+    padding-bottom: 0px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 100px !important;
+  }
+  .page-container{
+    position: relative;
+    background: white;
+  }
+  .page-container section.cf{
+    width: 80%;
+    margin: 50px auto 100px !important;
+    padding-top: 200px;
+  }
+  .page-container section.cf .containerr .content .lead{
+    color: #333333;
+    font-weight: lighter;
+    font-family: "History-Two";
+  }
+  .page-container section.cf .containerr .content .lead h2{
+    font-size: 2rem;
+    margin: 0;
+  }
+  .page-container section.cf .containerr .content .text{
+    margin-top: 20px;
+  }
+  .page-container section.cf .containerr .content .text p{
+    font-size: 1rem;
+    font-family: "Courier New";
+  }
+  .page-container section.cf .containerr .content .button{
+    margin-top: 50px;
+  }
+  .page-container section.cf .containerr .content .button a{
+    border: solid 1px #333333;
+    border-bottom: solid 1px #333333;
+    padding: 20px;
+    font-size: 1rem;
+    color: #333333;
+    font-family: "Courier New";
+    transition: all .25s;
+  }
+  .page-container section.cf .containerr .content .button a:hover{
+    background: #333333;
+    color: #fafafa;
+    transition: all .25s;
+  }
+  .page-container section#contacto{
+    display: none;
+  }
+  .page-container section#contacto2{
+    margin-top: 90px;
+    position: absolute;
+    top: -90px;
+    z-index: 5;
+    display: block;
+    background: #333333;
+    width: 100%;
+  }
+  .page-container section#contacto2 .logo{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: 30px;
+  }
+  .page-container section#contacto2 .logo img{
+    width: 35px;
+  }
+  .page-container section#contacto2 h2{
+    font-family: "Courier New";
+    color: #fafafa !important;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 10px;
+  }
+  .page-container section.imageee{
+    background: #fafafa url("../img/nosotros3.jpg") center center;
+    background-size: cover;
+    width: 100%;
+    height: 70vh;
+  }
+  .page-container section.imageee .lead{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 150px;
+  }
+  .page-container section.imageee .lead h1{
+    font-size: 3.5rem !important;
+  }
+  .page-container section.imageee .ver{
+    margin-top: 50px;
+    margin-left: 20px;
+  }
+  .page-container section.imageee .ver a{
+    color: #fafafa;
+    font-size: 1rem;
+    font-family: "Courier New";
+    padding: 20px;
+    border: solid 1px #fafafa;
+  }
+  .page-container section.imagenes{
+    width: 90%;
+  }
+  .page-container section.imagenes span{
+    font-size: 1.5rem !important;
+  }
+  .page-container section.footer{
+    padding: 100px 0;
+    background: #333333;
+  }
+  .page-container section.footer .foo{
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    font-size: 1rem;
+    color: #fafafa;
+    font-family: "Courier New";
+  }
+  .page-container section.footer .foo .logo img{
+    width: 100px;
+    margin: 0;
+  }
+  .page-container section.footer .foo .text p{
+    text-transform: uppercase;
+  }
+  .page-container section.footer .foo .dir{
+    margin-top: 30px;
+  }
+  .page-container section.footer .foo .dir span{
+    border-bottom: solid 1px #fafafa;
+  }
+  .page-container section.footer .foo .list{
+    margin-top: 65px;
+  }
+  .page-container section.footer .foo .list ul li{
+    list-style: none;
+  }
+  .page-container section.footer .foo .list ul li a{
+    color: #fafafa;
+  }
+  .page-container section.footer .foo .redes{
+    margin-top: 65px;
+  }
+  .page-container section.footer .foo .redes ul li{
+    list-style: none;
+  }
+  .page-container section.footer .foo .redes ul li a{
+    color: #fafafa;
+  }
+  .overlay .wrap{
+    background: #fafafa;
+    width: 80%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 30px !important;
+    position: relative;
+  }
+  .overlay .wrap span{
+    font-size: 1rem;
+    font-family: "Courier New";
+    text-transform: uppercase;
+    border-bottom: solid 1px #333333;
+  }
+  .overlay .wrap span.top{
+    width: 70% !important;
+    display: inline-block;
+  }
+  .overlay .wrap h2{
+    font-size: 1rem !important;
+    margin-top: 50px;
+  }
+  .overlay .wrap .text{
+    height: 200px !important;
+    overflow-y: scroll;
+  }
+  .overlay .wrap .text p{
+    font-size: 1rem;
+    font-family: "Courier New";
+  }
+  .overlay .wrap .text p.q{
+    border-bottom: solid 1px #333333;
+  }
+  .overlay .wrap .x{
+    cursor: pointer;
+    position: absolute;
+    top: 30px !important;
+    right: 30px !important;
+  }
+  .overlay .wrap .x img{
+    width: 20px;
+  }
+  .page-tratamientos{
+    background: white;
+  }
+  .page-tratamientos section.compu .compuu{
+    margin-left: 20px !important;
+    left: 30px;
+  }
+  .page-tratamientos section.compu .ri{
+    width: 90%;
+    margin-left: -40px !important;
+  }
+  .page-tratamientos section.home{
+    width: 100%;
+  }
+  .page-tratamientos section.home .logo{
+    display: none;
+  }
+  .page-tratamientos section.home .logo img{
+    width: 100px;
+  }
+  .page-tratamientos section.home .menu{
+    position: relative;
+  }
+  .page-tratamientos section.home .menu .resp{
+    background: white;
+    width: 100%;
+    height: 90px;
+    display: block;
+    position: fixed;
+    left: 0;
+    z-index: 10;
+  }
+  .page-tratamientos section.home .menu .resp .logo-resp h2{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+    left: 90px;
+    font-size: 2rem;
+  }
+  .page-tratamientos section.home .menu .resp .logo-resp img{
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    margin: 0;
+    padding: 0;
+    width: 40px;
+  }
+  .page-tratamientos section.home .menu .resp .ham{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    right: 30px;
+    width: 35px;
+  }
+  .page-tratamientos section.home .menu .resp .ham .line{
+    margin-bottom: 10px !important;
+    width: 100%;
+    height: 1px;
+    background: #333333;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+  }
+  .page-tratamientos section.home .menu .resp .ham .line:last-child{
+    margin-bottom: 0;
+  }
+  .page-tratamientos section.home .menu .resp .clicked .line{
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+  }
+  .page-tratamientos section.home .menu .resp .clicked .line:first-child{
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    position: relative;
+    top: 5px;
+  }
+  .page-tratamientos section.home .menu .resp .clicked .line:nth-child(2){
+    display: none;
+  }
+  .page-tratamientos section.home .menu .resp .clicked .line:last-child{
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+    position: relative;
+    bottom: 6px;
+  }
+  .page-tratamientos section.home .menu ul{
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    margin-top: 30px;
+    top: 0px;
+    float: none;
+    width: 100%;
+    background: #fafafa;
+    transition: all 1s;
+    height: 0;
+    overflow: hidden;
+  }
+  .page-tratamientos section.home .menu ul li{
+    display: block;
+    margin-bottom: 25px;
+  }
+  .page-tratamientos section.home .menu ul li:last-child{
+    display: none;
+  }
+  .page-tratamientos section.home .menu ul li a{
+    color: #333333;
+  }
+  .page-tratamientos section.home .menu ul li a:hover{
+    border-bottom: solid 1px #333333;
+  }
+  .page-tratamientos section.home .menu ul li .tel{
+    color: #fafafa;
+    background: #333333;
+    padding: 10px;
+  }
+  .page-tratamientos section.home .menu .grow{
+    height: 150px;
+    padding-top: 90px;
+    transition: all 1s;
+  }
+  .page-tratamientos section.home .lead{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 150px;
+    background: none;
+  }
+  .page-tratamientos section.home .lead h1{
+    padding-bottom: 0px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 100px !important;
+  }
+  .page-container{
+    position: relative;
+    background: white;
+  }
+  .page-container section.cf.nosotros{
+    width: 100% !important;
+    margin: 50px auto 0 !important;
+    padding-top: 200px;
+  }
+  .page-container section.cf.nosotros .containerr .content{
+    left: 20px !important;
+    margin-left: 20px !important;
+  }
+  .page-container section.cf.nosotros .containerr .content .lead{
+    color: #333333;
+    font-weight: lighter;
+    font-family: "History-Two";
+  }
+  .page-container section.cf.nosotros .containerr .content .lead h2{
+    font-size: 2rem;
+    margin: 0;
+  }
+  .page-container section.cf.nosotros .containerr .content .text{
+    margin-top: 20px;
+  }
+  .page-container section.cf.nosotros .containerr .content .text p{
+    font-size: 1rem;
+    font-family: "Courier New";
+  }
+  .page-container section.cf.nosotros .containerr .content .button{
+    margin-top: 50px;
+  }
+  .page-container section.cf.nosotros .containerr .content .button a{
+    border: solid 1px #333333;
+    border-bottom: solid 1px #333333;
+    padding: 20px;
+    font-size: 1rem;
+    color: #333333;
+    font-family: "Courier New";
+    transition: all .25s;
+  }
+  .page-container section.cf.nosotros .containerr .content .button a:hover{
+    background: #333333;
+    color: #fafafa;
+    transition: all .25s;
+  }
+  .page-container section#contacto{
+    display: none;
+  }
+  .page-container section#contacto2{
+    margin-top: 90px;
+    position: absolute;
+    top: -90px;
+    z-index: 5;
+    display: block;
+    background: #333333;
+    width: 100%;
+  }
+  .page-container section#contacto2 .logo{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: 30px;
+  }
+  .page-container section#contacto2 .logo img{
+    width: 35px;
+  }
+  .page-container section#contacto2 h2{
+    font-family: "Courier New";
+    color: #fafafa !important;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 10px;
+  }
+  .page-container section.imageeee{
+    background: #fafafa url("../img/nosotros8.jpg") center center;
+    background-size: cover;
+    width: 100%;
+    height: 70vh;
+  }
+  .page-container section.imageeee .btn{
+    margin-left: 10%;
+  }
+  .page-container section.imageeee.last{
+    background: #fafafa url("../img/nosotros9.jpg") center center;
+    background-size: cover;
+    width: 100%;
+    height: 70vh;
+  }
+  .page-container section.imagenes{
+    width: 90%;
+  }
+  .page-container section.imagenes span{
+    font-size: 1.5rem !important;
+  }
+  .page-container section.slide #carousel{
+    height: 50vh !important;
+  }
+  .page-container section.slide #carousel img{
+    margin: 0 auto;
+    height: auto !important;
+    width: 70%;
+  }
+  .page-container section.slide .nav-sld .prev{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .page-container section.slide .nav-sld .prev img{
+    width: 30px;
+  }
+  .page-container section.slide .nav-sld .next{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    right: 0;
+  }
+  .page-container section.slide .nav-sld .next img{
+    width: 30px;
+  }
+  .page-container section.footer{
+    padding: 100px 0;
+    background: #333333;
+  }
+  .page-container section.footer .foo{
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    font-size: 1rem;
+    color: #fafafa;
+    font-family: "Courier New";
+  }
+  .page-container section.footer .foo .logo img{
+    width: 100px;
+    margin: 0;
+  }
+  .page-container section.footer .foo .text p{
+    text-transform: uppercase;
+  }
+  .page-container section.footer .foo .dir{
+    margin-top: 30px;
+  }
+  .page-container section.footer .foo .dir span{
+    border-bottom: solid 1px #fafafa;
+  }
+  .page-container section.footer .foo .list{
+    margin-top: 65px;
+  }
+  .page-container section.footer .foo .list ul li{
+    list-style: none;
+  }
+  .page-container section.footer .foo .list ul li a{
+    color: #fafafa;
+  }
+  .page-container section.footer .foo .redes{
+    margin-top: 65px;
+  }
+  .page-container section.footer .foo .redes ul li{
+    list-style: none;
+  }
+  .page-container section.footer .foo .redes ul li a{
+    color: #fafafa;
+  }
+  .page-contacto section{
+    width: 100%;
+  }
+  .page-contacto section .logo{
+    display: none;
+  }
+  .page-contacto section .logo img{
+    width: 100px;
+  }
+  .page-contacto section .menu{
+    position: relative;
+  }
+  .page-contacto section .menu .resp{
+    background: white;
+    width: 100%;
+    height: 90px;
+    display: block;
+    position: fixed;
+    left: 0;
+    z-index: 10;
+  }
+  .page-contacto section .menu .resp .logo-resp h2{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+    left: 90px;
+    font-size: 2rem;
+  }
+  .page-contacto section .menu .resp .logo-resp img{
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    margin: 0;
+    padding: 0;
+    width: 40px;
+  }
+  .page-contacto section .menu .resp .ham{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    right: 30px;
+    width: 35px;
+  }
+  .page-contacto section .menu .resp .ham .line{
+    margin-bottom: 10px !important;
+    width: 100%;
+    height: 1px;
+    background: #333333;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+  }
+  .page-contacto section .menu .resp .ham .line:last-child{
+    margin-bottom: 0;
+  }
+  .page-contacto section .menu .resp .clicked .line{
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+  }
+  .page-contacto section .menu .resp .clicked .line:first-child{
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    position: relative;
+    top: 5px;
+  }
+  .page-contacto section .menu .resp .clicked .line:nth-child(2){
+    display: none;
+  }
+  .page-contacto section .menu .resp .clicked .line:last-child{
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+    position: relative;
+    bottom: 6px;
+  }
+  .page-contacto section .menu ul{
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    margin-top: 30px;
+    top: 0px;
+    float: none;
+    width: 100%;
+    background: #fafafa;
+    transition: all 1s;
+    height: 0;
+    overflow: hidden;
+  }
+  .page-contacto section .menu ul li{
+    display: block;
+    margin-bottom: 25px;
+  }
+  .page-contacto section .menu ul li:last-child{
+    display: none;
+  }
+  .page-contacto section .menu ul li a{
+    color: #333333;
+  }
+  .page-contacto section .menu ul li a:hover{
+    border-bottom: solid 1px #333333;
+  }
+  .page-contacto section .menu ul li .tel{
+    color: #fafafa;
+    background: #333333;
+    padding: 10px;
+  }
+  .page-contacto section .menu .grow{
+    height: 150px;
+    padding-top: 90px;
+    transition: all 1s;
+  }
+  .page-contacto section .lead{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 150px;
+    background: none;
+  }
+  .page-contacto section .lead h1{
+    padding-bottom: 0px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 100px !important;
+  }
+  .page-container{
+    position: relative;
+    background: white;
+  }
+  .page-container section.map{
+    width: 80%;
+    margin: 50px auto 100px !important;
+    padding-top: 200px;
+  }
+  .page-container section.map .info{
+    margin-top: 50px !important;
+  }
+  .page-container section.map .info h2{
+    margin-top: 0;
+    font-size: 2rem;
+  }
+  .page-container section.map .info .btn{
+    margin-top: 50px;
+    max-width: 250px;
+    margin-bottom: 50px;
+    display: block;
+  }
+  .page-container section.map .info .btn a{
+    color: #333333 !important;
+    font-family: "Courier New" !important;
+    font-size: 1rem;
+    padding: 20px;
+    border: solid 1px #333333;
+    display: block !important;
+  }
+  .page-container section.map .info .ri{
+    font-size: 1rem;
+    font-family: "Courier New";
+  }
+  .page-container section.map .info .ri span{
+    border-bottom: solid 1px #333333;
+  }
+  .page-container section.map .info .ri a{
+    color: #cfcfcf;
+  }
+  .page-container section.map .info .ri a:hover{
+    color: #333333;
+  }
+  .page-container section#contacto{
+    display: none;
+  }
+  .page-container section#contacto2{
+    margin-top: 90px;
+    position: absolute;
+    top: -90px;
+    z-index: 5;
+    display: block;
+    background: #333333;
+    width: 100%;
+  }
+  .page-container section#contacto2 .logo{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: 50px;
+  }
+  .page-container section#contacto2 .logo img{
+    width: 35px;
+  }
+  .page-container section#contacto2 h2{
+    font-family: "Courier New";
+    color: #fafafa !important;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 10px;
+  }
+  .page-container section.footer{
+    padding: 100px 0;
+    background: #333333;
+  }
+  .page-container section.footer .foo{
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    font-size: 1rem;
+    color: #fafafa;
+    font-family: "Courier New";
+  }
+  .page-container section.footer .foo .logo img{
+    width: 100px;
+    margin: 0;
+  }
+  .page-container section.footer .foo .text p{
+    text-transform: uppercase;
+  }
+  .page-container section.footer .foo .dir{
+    margin-top: 30px;
+  }
+  .page-container section.footer .foo .dir span{
+    border-bottom: solid 1px #fafafa;
+  }
+  .page-container section.footer .foo .list{
+    margin-top: 65px;
+  }
+  .page-container section.footer .foo .list ul li{
+    list-style: none;
+  }
+  .page-container section.footer .foo .list ul li a{
+    color: #fafafa;
+  }
+  .page-container section.footer .foo .redes{
+    margin-top: 65px;
+  }
+  .page-container section.footer .foo .redes ul li{
+    list-style: none;
+  }
+  .page-container section.footer .foo .redes ul li a{
+    color: #fafafa;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .page-home{
+    width: 100%;
+    margin-left: -20px !important;
+  }
+  .page-home section .menu .resp .logo-resp h2{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+    left: 90px;
+    font-size: 1rem;
+  }
+  .page-home .lead h1{
+    font-size: 1.5rem !important;
+  }
+  .page-container section.cf .containerr .content .button{
+    margin-top: 50px;
+    border: solid 1px #333333;
+    border-bottom: solid 1px #333333;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .page-container section.cf .containerr .content .button .col{
+    padding-left: 0 !important;
+  }
+  .page-container section.cf .containerr .content .button .col a{
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    font-size: 1rem;
+    color: #333333;
+    font-family: "Courier New";
+    transition: all .25s;
+  }
+  .page-container section.cf .containerr .content .button .col a:hover{
+    background: #333333;
+    color: #fafafa;
+    transition: all .25s;
+  }
+  .page-container section.compu .compuu .col{
+    padding-left: 0 !important;
+  }
+  .page-container section.compu .compuu .col .lead{
+    margin-top: 50px;
+  }
+  .page-container section.compu .compuu .col .btn{
+    width: 100% !important;
+  }
+  .page-container section.info{
+    padding-bottom: 0 !important;
+  }
+  .page-container section.info .col{
+    margin-bottom: 80px;
+  }
+  .page-container section.info h2{
+    font-size: 1.5rem;
+  }
+  .page-container section.info h3{
+    font-size: 1.3rem;
+  }
+  .page-container section.info .up{
+    margin-bottom: 0 !important;
+  }
+  .page-container section.contact{
+    margin-top: 50px !important;
+  }
+  .page-container section.contact .contacto .info{
+    position: static !important;
+  }
+  .page-container section.contact .contacto .info a.mail{
+    display: block;
+    margin-top: 50px;
+    color: #cfcfcf;
+  }
+  .page-container section.contact .contacto .map iframe{
+    width: 100%;
+  }
+  .page-container section.footer{
+    padding-top: 50px !important;
+    padding-bottom: 250px !important;
+  }
+  .page-container section.footer .foo{
+    width: 90%;
+    position: relative;
+  }
+  .page-container section.footer .foo .logo{
+    float: left;
+  }
+  .page-container section.footer .foo .logo img{
+    width: 30px;
+    margin: 0;
+  }
+  .page-container section.footer .foo .text{
+    position: absolute;
+    right: 0 !important;
+    top: 0;
+  }
+  .page-container section.footer .foo .text p{
+    text-transform: uppercase;
+  }
+  .page-container section.footer .foo .dir{
+    margin-top: 0 !important;
+    position: absolute;
+    right: 0 !important;
+    top: 40px !important;
+  }
+  .page-container section.footer .foo .dir span{
+    border-bottom: solid 1px #fafafa;
+  }
+  .page-container section.footer .foo .list{
+    display: none;
+  }
+  .page-container section.footer .foo .list ul li{
+    list-style: none;
+  }
+  .page-container section.footer .foo .list ul li a{
+    color: #fafafa;
+  }
+  .page-container section.footer .foo .redes{
+    position: absolute;
+    right: 106px !important;
+    top: 65px !important;
+  }
+  .page-container section.footer .foo .redes ul{
+    padding-left: 0 !important;
+  }
+  .page-container section.footer .foo .redes ul li{
+    list-style: none;
+  }
+  .page-nosotros{
+    width: 100%;
+    margin-left: -20px !important;
+  }
+  .page-nosotros section .menu .resp .logo-resp h2{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+    left: 90px;
+    font-size: 1rem;
+  }
+  .page-nosotros .lead h1{
+    font-size: 1.5rem !important;
+  }
+  .page-container section.cf .containerr .content .lead h2{
+    font-size: 1.5rem;
+  }
+  .page-container section.cf .containerr .content .button{
+    margin-top: 50px;
+    border: solid 1px #333333;
+    border-bottom: solid 1px #333333;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .page-container section.cf .containerr .content .button .col{
+    padding-left: 0 !important;
+    text-align: center;
+  }
+  .page-container section.cf .containerr .content .button .col a{
+    border: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    font-size: 1rem;
+    color: #333333;
+    font-family: "Courier New";
+    transition: all .25s;
+  }
+  .page-container section.cf .containerr .content .button .col a:hover{
+    background: #333333;
+    color: #fafafa;
+    transition: all .25s;
+  }
+  .page-container section.imageee .lead{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 50px !important;
+  }
+  .page-container section.imageee .lead h1{
+    font-size: 1.5rem !important;
+  }
+  .page-container section.imageee .ver{
+    max-width: 300px !important;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+  .page-container section.imageee .ver a{
+    display: block !important;
+    padding: 10px !important;
+  }
+  .page-container section.footer{
+    padding-top: 50px !important;
+    padding-bottom: 250px !important;
+  }
+  .page-container section.footer .foo{
+    width: 90%;
+    position: relative;
+  }
+  .page-container section.footer .foo .logo{
+    float: left;
+  }
+  .page-container section.footer .foo .logo img{
+    width: 30px;
+    margin: 0;
+  }
+  .page-container section.footer .foo .text{
+    position: absolute;
+    right: 0 !important;
+    top: 0;
+  }
+  .page-container section.footer .foo .text p{
+    text-transform: uppercase;
+  }
+  .page-container section.footer .foo .dir{
+    margin-top: 0 !important;
+    position: absolute;
+    right: 0 !important;
+    top: 40px !important;
+  }
+  .page-container section.footer .foo .dir span{
+    border-bottom: solid 1px #fafafa;
+  }
+  .page-container section.footer .foo .list{
+    display: none;
+  }
+  .page-container section.footer .foo .list ul li{
+    list-style: none;
+  }
+  .page-container section.footer .foo .list ul li a{
+    color: #fafafa;
+  }
+  .page-container section.footer .foo .redes{
+    position: absolute;
+    right: 106px !important;
+    top: 65px !important;
+  }
+  .page-container section.footer .foo .redes ul{
+    padding-left: 0 !important;
+  }
+  .page-container section.footer .foo .redes ul li{
+    list-style: none;
+  }
+  .page-tratamientos{
+    width: 100%;
+  }
+  .page-tratamientos section.home .menu .resp .logo-resp h2{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+    left: 90px;
+    font-size: 1rem;
+  }
+  .page-tratamientos .lead h1{
+    font-size: 2.5rem;
+  }
+  .page-container section.cf .containerr .content .lead h2{
+    font-size: 1.5rem !important;
+  }
+  .page-container section.cf .containerr .content .button{
+    margin-top: 50px;
+    border: solid 1px #333333;
+    border-bottom: solid 1px #333333;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .page-container section.cf .containerr .content .button .col{
+    padding-left: 0 !important;
+    text-align: center;
+  }
+  .page-container section.cf .containerr .content .button .col a{
+    border: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    font-size: 1rem;
+    color: #333333;
+    font-family: "Courier New";
+    transition: all .25s;
+  }
+  .page-container section.cf .containerr .content .button .col a:hover{
+    background: #333333;
+    color: #fafafa;
+    transition: all .25s;
+  }
+  .page-container section.imageee .lead{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 150px;
+  }
+  .page-container section.imageee .lead h1{
+    font-size: 2rem;
+  }
+  .page-container section.footer{
+    padding-top: 50px !important;
+    padding-bottom: 250px !important;
+  }
+  .page-container section.footer .foo{
+    width: 90%;
+    position: relative;
+  }
+  .page-container section.footer .foo .logo{
+    float: left;
+  }
+  .page-container section.footer .foo .logo img{
+    width: 30px;
+    margin: 0;
+  }
+  .page-container section.footer .foo .text{
+    position: absolute;
+    right: 0 !important;
+    top: 0;
+  }
+  .page-container section.footer .foo .text p{
+    text-transform: uppercase;
+  }
+  .page-container section.footer .foo .dir{
+    margin-top: 0 !important;
+    position: absolute;
+    right: 0 !important;
+    top: 40px !important;
+  }
+  .page-container section.footer .foo .dir span{
+    border-bottom: solid 1px #fafafa;
+  }
+  .page-container section.footer .foo .list{
+    display: none;
+  }
+  .page-container section.footer .foo .list ul li{
+    list-style: none;
+  }
+  .page-container section.footer .foo .list ul li a{
+    color: #fafafa;
+  }
+  .page-container section.footer .foo .redes{
+    position: absolute;
+    right: 106px !important;
+    top: 65px !important;
+  }
+  .page-container section.footer .foo .redes ul{
+    padding-left: 0 !important;
+  }
+  .page-container section.footer .foo .redes ul li{
+    list-style: none;
+  }
+  .page-contacto{
+    width: 100%;
+    margin-left: -20px !important;
+  }
+  .page-contacto section .menu .resp .logo-resp h2{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+    left: 80px;
+    font-size: .8rem;
+  }
+  .page-contacto .lead h1{
+    font-size: 2.5rem;
+  }
+  .page-container section.map .info h2{
+    font-size: 1.5rem !important;
+  }
+  .page-container section.footer{
+    padding-top: 50px !important;
+    padding-bottom: 250px !important;
+  }
+  .page-container section.footer .foo{
+    width: 90%;
+    position: relative;
+  }
+  .page-container section.footer .foo .logo{
+    float: left;
+  }
+  .page-container section.footer .foo .logo img{
+    width: 30px;
+    margin: 0;
+  }
+  .page-container section.footer .foo .text{
+    position: absolute;
+    right: 30px !important;
+    top: 0;
+  }
+  .page-container section.footer .foo .text p{
+    text-transform: uppercase;
+  }
+  .page-container section.footer .foo .dir{
+    margin-top: 0 !important;
+    position: absolute;
+    right: 30px !important;
+    top: 40px !important;
+  }
+  .page-container section.footer .foo .dir span{
+    border-bottom: solid 1px #fafafa;
+  }
+  .page-container section.footer .foo .list{
+    display: none;
+  }
+  .page-container section.footer .foo .list ul li{
+    list-style: none;
+  }
+  .page-container section.footer .foo .list ul li a{
+    color: #fafafa;
+  }
+  .page-container section.footer .foo .redes{
+    position: absolute;
+    right: 136px !important;
+    top: 65px !important;
+  }
+  .page-container section.footer .foo .redes ul{
+    padding-left: 0 !important;
+  }
+  .page-container section.footer .foo .redes ul li{
+    list-style: none;
+  }
+}
+
+@media screen and (max-width: 350px){
+  .page-home section .menu .resp .logo-resp h2{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+    left: 70px !important;
+    font-size: .8rem;
+  }
+  .page-home section .menu .resp .logo-resp img{
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    margin: 0;
+    padding: 0;
+    width: 30px;
+  }
+  .page-home section .menu .resp .ham{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    right: 30px;
+    width: 40px;
+  }
+  .page-home section .menu .resp .ham .line{
+    margin-bottom: 12px;
+    width: 100%;
+    height: 1px;
+    background: #333333;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+  }
+  .page-home section .menu .resp .ham .line:last-child{
+    margin-bottom: 0;
+  }
+  .page-home section .menu .resp .clicked .line{
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+  }
+  .page-home section .menu .resp .clicked .line:first-child{
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    position: relative;
+    top: 5px;
+  }
+  .page-home section .menu .resp .clicked .line:nth-child(2){
+    display: none;
+  }
+  .page-home section .menu .resp .clicked .line:last-child{
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+    position: relative;
+    bottom: 6px;
+  }
+  .page-home section .menu ul{
+    position: fixed;
+    left: -25px;
+    margin-top: 30px;
+    top: 0px;
+    float: none;
+    width: 100%;
+    background: #fafafa;
+    transition: all 1s;
+    height: 0;
+    overflow: hidden;
+  }
+  .page-home section .menu ul li{
+    display: block;
+    margin-bottom: 25px;
+  }
+  .page-home section .menu ul li:last-child{
+    display: none;
+  }
+  .page-home section .menu ul li a{
+    color: #333333;
+  }
+  .page-home section .menu ul li a:hover{
+    border-bottom: solid 1px #333333;
+  }
+  .page-home section .menu ul li .tel{
+    color: #fafafa;
+    background: #333333;
+    padding: 10px;
+  }
+  .page-home section .menu .grow{
+    height: 150px;
+    padding-top: 90px;
+    transition: all 1s;
+  }
+  section#contacto2{
+    margin-top: 90px;
+    position: absolute;
+    top: -90px;
+    z-index: 5;
+    display: block;
+    background: #333333;
+    width: 100%;
+  }
+  section#contacto2 .logo{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: 20px !important;
+  }
+  section#contacto2 h2{
+    font-family: "Courier New";
+    color: #fafafa !important;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 10px;
+  }
+  section.footer .foo .logo img{
+    width: 30px;
+    margin-left: -30px !important;
+  }
+  h1{
+    font-size: 1.5rem !important;
+  }
+  .page-nosotros section .menu .resp .logo-resp h2{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+    left: 70px !important;
+    font-size: .8rem;
+  }
+  .page-nosotros section .menu .resp .logo-resp img{
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    margin: 0;
+    padding: 0;
+    width: 30px;
+  }
+  .page-nosotros section .menu .resp .ham{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    right: 30px;
+    width: 40px;
+  }
+  .page-nosotros section .menu .resp .ham .line{
+    margin-bottom: 12px;
+    width: 100%;
+    height: 1px;
+    background: #333333;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+  }
+  .page-nosotros section .menu .resp .ham .line:last-child{
+    margin-bottom: 0;
+  }
+  .page-nosotros section .menu .resp .clicked .line{
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+  }
+  .page-nosotros section .menu .resp .clicked .line:first-child{
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    position: relative;
+    top: 5px;
+  }
+  .page-nosotros section .menu .resp .clicked .line:nth-child(2){
+    display: none;
+  }
+  .page-nosotros section .menu .resp .clicked .line:last-child{
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+    position: relative;
+    bottom: 6px;
+  }
+  .page-nosotros section .menu ul{
+    position: fixed;
+    left: -25px;
+    margin-top: 30px;
+    top: 0px;
+    float: none;
+    width: 100%;
+    background: #fafafa;
+    transition: all 1s;
+    height: 0;
+    overflow: hidden;
+  }
+  .page-nosotros section .menu ul li{
+    display: block;
+    margin-bottom: 25px;
+  }
+  .page-nosotros section .menu ul li:last-child{
+    display: none;
+  }
+  .page-nosotros section .menu ul li a{
+    color: #333333;
+  }
+  .page-nosotros section .menu ul li a:hover{
+    border-bottom: solid 1px #333333;
+  }
+  .page-nosotros section .menu ul li .tel{
+    color: #fafafa;
+    background: #333333;
+    padding: 10px;
+  }
+  .page-nosotros section .menu .grow{
+    height: 150px;
+    padding-top: 90px;
+    transition: all 1s;
+  }
+  .page-tratamientos section.home .menu .resp .logo-resp h2{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+    left: 70px !important;
+    font-size: .8rem;
+  }
+  .page-tratamientos section.home .menu .resp .logo-resp img{
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    margin: 0;
+    padding: 0;
+    width: 30px;
+  }
+  .page-tratamientos section.home .menu .resp .ham{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    right: 30px;
+    width: 40px;
+  }
+  .page-tratamientos section.home .menu .resp .ham .line{
+    margin-bottom: 12px;
+    width: 100%;
+    height: 1px;
+    background: #333333;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+  }
+  .page-tratamientos section.home .menu .resp .ham .line:last-child{
+    margin-bottom: 0;
+  }
+  .page-tratamientos section.home .menu .resp .clicked .line{
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+  }
+  .page-tratamientos section.home .menu .resp .clicked .line:first-child{
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    position: relative;
+    top: 5px;
+  }
+  .page-tratamientos section.home .menu .resp .clicked .line:nth-child(2){
+    display: none;
+  }
+  .page-tratamientos section.home .menu .resp .clicked .line:last-child{
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+    position: relative;
+    bottom: 6px;
+  }
+  .page-tratamientos section.home .menu ul{
+    position: fixed;
+    left: -25px;
+    margin-top: 30px;
+    top: 0px;
+    float: none;
+    width: 100%;
+    background: #fafafa;
+    transition: all 1s;
+    height: 0;
+    overflow: hidden;
+  }
+  .page-tratamientos section.home .menu ul li{
+    display: block;
+    margin-bottom: 25px;
+  }
+  .page-tratamientos section.home .menu ul li:last-child{
+    display: none;
+  }
+  .page-tratamientos section.home .menu ul li a{
+    color: #333333;
+  }
+  .page-tratamientos section.home .menu ul li a:hover{
+    border-bottom: solid 1px #333333;
+  }
+  .page-tratamientos section.home .menu ul li .tel{
+    color: #fafafa;
+    background: #333333;
+    padding: 10px;
+  }
+  .page-tratamientos section.home .menu .grow{
+    height: 150px;
+    padding-top: 90px;
+    transition: all 1s;
+  }
+  .page-contact section .menu .resp .logo-resp h2{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+    left: 70px !important;
+    font-size: .8rem;
+  }
+  .page-contact section .menu .resp .logo-resp img{
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    margin: 0;
+    padding: 0;
+    width: 30px;
+  }
+  .page-contact section .menu .resp .ham{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    right: 30px;
+    width: 40px;
+  }
+  .page-contact section .menu .resp .ham .line{
+    margin-bottom: 12px;
+    width: 100%;
+    height: 1px;
+    background: #333333;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+  }
+  .page-contact section .menu .resp .ham .line:last-child{
+    margin-bottom: 0;
+  }
+  .page-contact section .menu .resp .clicked .line{
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+  }
+  .page-contact section .menu .resp .clicked .line:first-child{
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    position: relative;
+    top: 5px;
+  }
+  .page-contact section .menu .resp .clicked .line:nth-child(2){
+    display: none;
+  }
+  .page-contact section .menu .resp .clicked .line:last-child{
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+    position: relative;
+    bottom: 6px;
+  }
+  .page-contact section .menu ul{
+    position: fixed;
+    left: -25px;
+    margin-top: 30px;
+    top: 0px;
+    float: none;
+    width: 100%;
+    background: #fafafa;
+    transition: all 1s;
+    height: 0;
+    overflow: hidden;
+  }
+  .page-contact section .menu ul li{
+    display: block;
+    margin-bottom: 25px;
+  }
+  .page-contact section .menu ul li:last-child{
+    display: none;
+  }
+  .page-contact section .menu ul li a{
+    color: #333333;
+  }
+  .page-contact section .menu ul li a:hover{
+    border-bottom: solid 1px #333333;
+  }
+  .page-contact section .menu ul li .tel{
+    color: #fafafa;
+    background: #333333;
+    padding: 10px;
+  }
+  .page-contact section .menu .grow{
+    height: 150px;
+    padding-top: 90px;
+    transition: all 1s;
+  }
+}
